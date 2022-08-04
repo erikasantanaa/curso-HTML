@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links, Imagens, Favicon</title>
+</head>
+<body>
+    <!-- Links HTML são hiperlinks.Quando você move o mouse sobre um link, a seta do mouse se transforma em uma pequena mão-->
+    <!-- Um link não precisa ser texto. Um link pode ser uma imagem ou qualquer outro elemento HTML-->
+    <a href="https://www.google.com/">Exemplo Google</a>
+
+    <!--Atributo de Destino
+      Por padrão, a página vinculada será exibida na janela atual do navegador. Para alterar isso, você deve especificar outro destino para o link:  
+    -->
+    <a href="https://www.google.com/" target="_blank">O targetatributo especifica onde abrir o documento vinculado</a>
+    <p>
+    Valores target:
+        _self- Predefinição. Abre o documento na mesma janela/guia em que foi clicado
+        _blank- Abre o documento em uma nova janela ou guia
+        _parent- Abre o documento no quadro pai
+        _top- Abre o documento em todo o corpo da janela
+    </p>
+    
+    <!-- Ambos os exemplos acima estão usando uma URL absoluta (um endereço completo da web) no hrefatributo.
+    Um link local (um link para uma página dentro do mesmo site) é especificado com um URL relativo (sem a parte "https://www") -->
+    <p><a href="https://www.google.com/">Google</a></p>
+    <p><a href="html_images.asp">HTML Images</a></p>
+
+    <!-- A tag HTML <img>é usada para incorporar uma imagem em uma página da web. As imagens estão vinculadas a páginas da web e não inseridas. 
+    Não possui tag de fechamento. src - Especifica o caminho para a imagem. alt - Especifica um texto alternativo para a imagem
+    Alterar o tamanho da img direto ou externo por style. Cuidado com imagens autorais, e não se pode controlar imagens externas caso elas mudem.   -->
+    <img src="url" alt="alternatetext">
+    <img src="img_girl.jpg" alt="Girl in a jacket" style="width:500px;height:600px;">
+    <img src="https://www.google.com/images/flor.jpg" alt="google.com">
+    <a href="exemplo.asp">
+        imagem link
+        <img src="https://www.google.com/images/flor.jpg" alt="google.com">
+    </a>
+
+    <!-- A tag HTML <map>define um mapa de imagem. Um mapa de imagem é uma imagem com áreas clicáveis. As áreas são definidas com uma ou mais <area>tags -->
+        <img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+
+    <map name="workmap">
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+        <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+    </map>
+
+    <p>Uma área clicável é definida usando um <area>elemento:
+        Você deve definir a forma da área clicável e pode escolher um destes valores:
+
+        rect- define uma região retangular
+        circle- define uma região circular
+        poly- define uma região poligonal
+        default- define toda a região
+    </p>
+
+    <!-- Dá para usar uma função javascript  -->
+    <map name="workmap">
+        <area shape="circle" coords="337,300,44" href="coffee.htm" onclick="myFunction()">
+      </map>
+      
+      <script>
+      function myFunction() {
+        alert("Exemplo Javascript");
+      }
+      </script>
+
+      <!-- Imagems de fundo em um elemento -->
+      <p style="background-image: url('exemplo.jpg');"></p>
+
+      <!-- Imagem de fundo em um elemento no <style> -->
+        <style>
+            p {
+              background-image: url('exemplo.jpg');
+            }
+        </style>
+
+        <!-- Imagem de fundo em uma página -->
+        <style>
+            body {
+              background-image: url('exemplo.jpg');
+            }
+        </style>
+        
+        <!-- imagem não repetir, cobrir toda a pagina, e esteja fixo. 
+        Para esticar :  background-size: 100% 100%; -->
+        <style>
+            body {
+              background-image: url('exemplo.jpg');
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+                background-size: cover;
+            }
+        </style>
+
+        <!-- O <picture>elemento contém um ou mais <source>elementos, cada um referindo-se a diferentes imagens por meio do srcset atributo. Desta forma, o navegador pode escolher a imagem que melhor se adapta à visualização e/ou dispositivo atual. -->
+            <!-- Mostrar imagens diferentes para diferentes tamanhos de tela.
+            Usar o <picture> quando o arquivo grande não carregar, suporte ao formato.
+            O navegador usará o primeiro formato de img que reconhecer -->
+            <picture>
+                <source media="(min-width: 650px)" srcset="img_food.jpg">
+                <source media="(min-width: 465px)" srcset="img_car.jpg">
+                <img src="img_girl.jpg">
+            </picture>
+          
+        <!-- Um favicon é uma pequena imagem exibida ao lado do título da página na guia do navegador. -->
+        <head>
+          <title>Exemplo Favicon</title>
+          <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        </head>
+
+        
+        
+
+</body>
+</html>
