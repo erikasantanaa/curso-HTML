@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>CLass, Id, Iframe</title>
+</head>
+<body>
+    <h1>Class</h1>
+    <!-- Class: Manipular elementos com o nome de classe específico;
+     e pode ser usado por um js para manipular elementos com nome especifico da class-->
+     <p>
+        <head>
+            <style>
+            .note {
+            font-size: 120%;
+            color: red;
+            }
+            </style>
+        </head>
+        <body>
+            
+            <h1>My <span class="note">Important</span> Heading</h1>
+            <p>This is some <span class="note">important</span> text.</p>
+        </body>
+    </p>
+
+    <!-- Class em Javascript: JavaScript pode acessar elementos com um nome de classe específico com o getElementsByClassName()método-->
+    <script>
+        function myFunction() {
+          var x = document.getElementsByClassName("city");
+          for (var i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+        }
+    </script>
+
+    <h1>Id</h1>
+    <!-- id: exclusivo para um elemento HTML 
+    declaração de estilo específica em uma folha de estilo. Também é usado pelo JavaScript para acessar e manipular o elemento com o id específico.-->
+    <p>
+        <head>
+            <style>
+            #myHeader {
+              background-color: lightblue;
+              color: black;
+              padding: 40px;
+              text-align: center;
+            }
+            </style>
+            </head>
+            <body>
+            
+            <h1 id="myHeader">My Header</h1>
+            
+            </body>
+    </p>
+
+    <!-- Um nome de classe pode ser usado por vários elementos HTML, enquanto um nome de id deve ser usado apenas por um elemento HTML dentro da página -->
+
+    <p> Id - Link
+        <h2 id="C4">Chapter 4</h2>
+    </p>
+
+
+    <!-- JavaScript pode acessar um elemento com um id específico com o getElementById()método -->
+    <script>
+        function displayResult() {
+          document.getElementById("myHeader").innerHTML = "Have a nice day!";
+        }
+    </script>
+
+
+    <h1>Iframe</h1>
+        <!-- A tag HTML <iframe>especifica um frame embutido
+        O src atributo define a URL da página a ser incorporada
+        Sempre inclua um titleatributo (para leitores de tela)
+        Os atributos heightand especificam o tamanho do iframewidth
+        Use border:none;para remover a borda ao redor do iframe -->
+    <iframe src="exemplo.htm" height="200" width="300" title="exemplo"></iframe>
+
+    
+
+
+
+
+</body>
+</html>

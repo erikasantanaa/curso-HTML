@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt=-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabelas: Bordas, tamanhos, Cabeçalhos, Preenchimento e espaçamento,   </title>
+</head>
+<body>
+    <h1>Tabelas</h1>
+    <!--Uma tabela em HTML consiste em células de tabela dentro de linhas e colunas
+    Célula da tabela: <td></td> (Conteúdos da célula - dados).Eles podem conter todos os tipos de elementos HTML; texto, imagens, listas, outras tabelas, etc.
+    Linha da tabela: <tr></tr> (Você pode ter quantas linhas quiser em uma tabela, apenas certifique-se de que o número de células seja o mesmo em cada linha) 
+    Cabeçalhos célula: <th></th> (Seja a primeira linha os cabeçalhos da tabela, padão está em negrito e centralizado)-->
+    <table>
+        <tr>
+          <th>Exemplo cabeçalhos 1</th>
+          <th>Exemplo cabeçalhos 2</th>
+          <th>Exemplo cabeçalhos 3</th>
+        </tr>
+        <tr>
+          <td>Exemplo</td>
+          <td>Exemplo</td>
+          <td>Exemplo</td>
+        </tr>
+    </table>
+
+    <h1>Bordas</h1>
+
+    <!-- Bordas: unica borda, borda com fundo para cada célula - CSS-->
+    <p>table, th, td {
+        border: 1px solid white;
+        border-collapse: collapse;
+      }
+      th, td {
+        background-color: #96D4D4;
+      }
+    </p>
+
+    <!-- Bordas redondas -->
+    <p>deixando de fora o table:
+        th, td {
+            border: 1px solid black;
+            border-radius: 10px;
+          }
+    </p>
+
+    <p>dentro do table, ganham formas arredondadas:
+        table, th, td {
+            border: 1px solid black;
+            border-radius: 10px;
+          }
+    </p>
+
+    <!-- Bordas pontilhadas -->
+    <p>você pode definir a aparência da borda:
+        th, td {
+            border-style: dotted;
+          }
+
+        Valores:
+        dotted, dashed, solid, double, groove, ridge     
+        inset, outset, none, hidden  
+    </p>
+
+    <!-- cor da borda -->
+    <p>
+        th, td {
+            border-color: #96D4D4;
+        }
+    </p>
+
+    <!-- Largura tabela  - adicione o style atributo ao <table>-->
+    <table style="width:100%">
+        <tr>
+            <th>Exemplo cabeçalhos 1</th>
+            <th>Exemplo cabeçalhos 2</th>
+            <th>Exemplo cabeçalhos 3</th>
+        </tr>
+        <tr>
+            <td>Exemplo</td>
+            <td>Exemplo</td>
+            <td>Exemplo</td>
+        </tr>
+    </table>
+
+    <!-- Largura da Coluna - adicione o style atributo em um <th> ou <td> 
+    100% responsivo  -->
+        <table style="width:100%">
+            <tr>
+                <th style="width:70%" >Exemplo 1</th>
+                <th>Exemplo 2</th>
+                <th>Exemplo 3</th>
+            </tr>
+            <tr>
+                <td>Exemplo</td>
+                <td>Exemplo</td>
+                <td>Exemplo</td>
+            </tr>
+        </table>
+
+    <!-- Altura da linha - adicione o style atributo em um elemento de linha da tabela -->
+
+    <table style="width:100%">
+        <tr>
+            <th>Exemplo 1</th>
+            <th>Exemplo 2</th>
+            <th>Exemplo 3</th>
+        </tr>
+        <tr style="height:200px">
+            <td>Exemplo</td>
+            <td>Exemplo</td>
+            <td>Exemplo</td>
+        </tr>
+    </table>
+
+    <h1>Cabeçalhos</h1>
+
+    <!-- Cabeçalho que se estende por duas ou mais colinas -->
+    <p>
+        <tr>
+            <th colspan="2">Name</th>
+            <th>Age</th>
+          </tr>
+    </p>
+
+    <!-- legenda que serve como cabeçalho para toda a tabela - <caption> -->
+    <p>
+        <caption>Monthly savings</caption>
+        <tr>
+          <th>Month</th>
+          <th>Savings</th>
+        </tr>
+    </p>
+
+    <!-- cabeçalho tabela vertical - defina a primeira célula em cada linha como um th elemento -->
+    <table>
+        <tr>
+          <th>Exemplo nome</th>
+          <td>xx</td>
+          <td>xx</td>
+        </tr>
+        <tr>
+          <th>Exemplo nome</th>
+          <td>xx</td>
+          <td>xx</td>
+        </tr>
+      </table>
+
+      <!-- Alinhar cabeçalhos tabela esquerda - use a text-align -->
+      <p>
+        th {
+            text-align: left;
+          }
+      </p>
+
+      <h1>Preenchimento e espaçamento</h1>
+
+      <!-- Preenchimento Células- espaço entre as bordas da célula e o conteúdo da célula-->
+      <p> padrão 0
+        th, td {
+            padding: 15px;
+          }
+
+          th, td {
+            padding-top: 10px;
+            padding-bottom: 20px;
+            padding-left: 30px;
+            padding-right: 40px;
+          }
+      </p>
+
+      espaçamentos Células - espaço entre cada célula.
+      <p>padrão 2px
+        table {
+            border-spacing: 30px;
+          }
+      </p>
+
+      <!-- Estilos de tabela -->
+      <p>Listas zebras
+        tr:nth-child(even) {
+            background-color: #D6EEEE;
+          }
+
+          Se você usar (odd)em vez de (even), o estilo ocorrerá na linha 1,3,5 etc. em vez de 2,4,6 etc.
+      </p>
+
+      <p> Listas zebras verticais
+        td:nth-child(even), th:nth-child(even) {
+            background-color: #D6EEEE;
+          }
+      </p>
+
+      <p> Listas zebras verticais e horizontais
+        tr:nth-child(even) {
+            background-color: rgba(150, 212, 212, 0.4);
+          }
+          
+          th:nth-child(even),td:nth-child(even) {
+            background-color: rgba(150, 212, 212, 0.4);
+          }
+      </p>
+
+      <p>Divisores horizontais
+        tr {
+            border-bottom: 1px solid #ddd;
+          }
+      </p>
+      
+      <p>Mesa flutuante
+        tr:hover {background-color: #D6EEEE;}
+      </p>
+    
+</body>
+</html>
