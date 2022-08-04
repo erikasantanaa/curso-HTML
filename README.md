@@ -1,5 +1,5 @@
 ## Estudos HTML
-Revisando o HTML: Básico, Intermediário.
+Revisando HTML
 
 Curso HTML:
 - Elementos
