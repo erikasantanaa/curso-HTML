@@ -2,11 +2,23 @@
 Revisando HTML
 
 Curso HTML:
-- Elementos
-- Atributos
-- Títulos
-- Paragrafos
-- Estilos
-- Formatação
-- Cotação
+- Elements
+- Attributes
+- Headings
+- Paragraphs
+- Style
+- Formatting
+- Quotations
+- Colors
+- CSS
+- Links
+- Images
+- Favicon
+- Tables
+- Lists
+- Block & Inline
+- Classes
+- Id
+- Iframes
+
 
