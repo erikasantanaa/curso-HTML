@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <header>
+        <h1>Formulários HTML Intermediário</h1>
+        <hr>
+    </header>
+
+    <main>
+        <div>
+            <h2>Formulário envio</h2>
+            <form method="GET" action="">
+                <input type="text" name="v"> <br>
+                <input type="password" name="senha"> <br>
+        
+                <input type="checkbox" name="curso" value="vue.js"> Vue.js <br>
+                <input type="checkbox" name="curso" value="react.js"> React.js <br>
+        
+                <input type="radio" name="gender" value="m" checked> Masculino  <br>
+                <input type="radio" name="gender" id="f"> Feminino <br>
+        
+                <input type="reset" value="Limpar" >
+        
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+        <div>
+            <h2>Formulário Selecionar</h2>
+            <form method="GET" action="">
+                <select name="estado">
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="PA">Pará</option>
+                    <option value="SC">Santa Catarina</option>
+                </select>
+                
+                <input type="submit">
+            </form>
+        </div>
+        <div>
+            <h2>Formulário de Contato</h2>
+            <form method="GET" action="">
+                <input type="text" name="assunto"> <br>
+
+                <textarea name="mensagem" cols="30" rows="10"></textarea><br>
+
+                <input type="submit"> <br><br>
+            </form>
+        </div>
+        <div>
+            <h2>HTML 5 - Verificar se funciona em todos os navegadores</h2>
+            <form method="GET" action="">
+
+                <input type="color" name="cor"> <br>
+                <input type="datetime-local" name="data" max="2018-12-15"> <br>
+                <input type="file" name="arquivo"> <br>
+                <input type="number" name="numérico" min="5" max="10"> <br>
+                <input type="range" name="intervalo" min="2" max="5"> <br>
+                <input type="email" name="email"> <br>
+
+
+                <input type="submit"> <br><br>
+
+
+            </form>              
+        </div>
+
+    </main>
+
+</body>
+</html>
