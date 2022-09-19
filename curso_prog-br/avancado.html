@@ -8,7 +8,7 @@
 </head>
 <body>
     
-    <ul id="lista" num="10">     
+    <ul id="lista" data-n="25">     
     </ul>
 
 
@@ -16,7 +16,11 @@
     <script>
         let lista = document.getElementById('lista')
 
-        let num = parseInt(lista.getAttribute('num'))
+        lista.dataset.n = 4
+
+        let num = parseInt(lista.getAttribute('data-n'))
+
+        console.log(num)
 
         let conteudo = ""
 
