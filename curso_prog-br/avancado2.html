@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .tela {
+            background-color: bisque;
+            width: 500px;
+            height: 500px;
+            position: relative;
+        }
+
+        .quadrado {
+            background-color: rgb(11, 82, 58);
+            width: 40px;
+            height: 40px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="tela">
+        <div id="jogador" class="quadrado"></div>
+    </div>
+
+    <script>
+        let jogador = document.getElementById("jogador")
+
+        // jogador.style.top = "30px";
+        // jogador.style.left = "60px";
+        // jogador.style.background = "black"
+
+        let xInicial = 0;
+        let yInicial = 0;
+
+        function moverJogadorOara(x, y) {
+            let posX = x + "px";
+            let posY = y + "px";
+
+            jogador.style.top = posX;
+            jogador.style.left = posY;
+        }
+
+        setInterval(function(){
+
+            moverJogadorOara(xInicial++, yInicial++);
+
+        }, 500);
+    </script>
+</body>
+</html>
